@@ -1,0 +1,10 @@
+#/bin/bash
+
+
+
+pid=`ps -ef | grep svr_name |grep -v grep |awk '{print $2}'`
+if [ "$pid" = "" ] ; then
+        cd /data/service/svr
+        ./start
+        echo `date +%F' '%H:%M:%S` "start svr process success" >> /data/om/autostart.log
+fi
