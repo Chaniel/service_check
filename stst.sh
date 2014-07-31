@@ -2,8 +2,8 @@
 date=`date +%F' '%H:%M:%S`
 
 # search
-echo $date "search ES connections:" `netstat -an | grep 7190 | grep ES | wc -l` >> /data/om/stat.txt
+echo $date "search ES connections:" `netstat -an | grep 7190 | grep ES | wc -l` >> /data/stat.txt
 
 
 # crontab -e
-# */15 * *　× ×  /data/om/stat.sh
+# */15 * *　× ×  /opt/stat.sh
